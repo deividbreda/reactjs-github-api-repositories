@@ -49,6 +49,21 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /node.modules/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                include: /images/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'src/images/',
+                      publicPath: 'src/images/'
+                    }
+                  }
+                ]
             }
         ],
     }

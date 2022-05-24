@@ -14,5 +14,5 @@
     "skipLibCheck": true                                 
   },
 
-  "include": ["src"]
+  "include": ["src", "src/components", "src/custom.d.ts"]
 }
