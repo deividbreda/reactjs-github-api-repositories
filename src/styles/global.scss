@@ -1,17 +1,283 @@
-* {
+/* Normalização */
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
+body{
+    margin: 0;
+    background: #0d1117;
+}
 
-    h1,
-    p,
-    a,
-    li {
-        font-family: Arial, Helvetica, sans-serif; 
+img{
+    border-style: none;
+}
+
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+    -webkit-appearance: button;
+}
+
+input {
+    font-size: 1em;
+}
+
+textarea {
+    overflow: auto;
+    font-size: 1.1em;
+}
+
+button,
+textarea,
+select,
+input {
+    outline: 0;
+}
+
+[hidden] {
+    display: none;
+}
+/* Fim da Normalização */
+
+/* Coluna */
+.col {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    width: 100%;
+    margin-right: -4px;
+    *zoom: 1;
+    *display: inline;
+}
+
+/* Duas Colunas */
+@media (min-width: 728px) {
+    .col-2 {
+        width: 50%;
     }
-   
 }
 
+/* Duas Colunas */
+@media (min-width: 728px) {
+    .col-2-itemTituloRepositorio {
+        width: 85%;
+    }
+
+    .col-2-itemStatusRepositorio {
+        width: 15%;
+    }
+}
+
+/* Duas Colunas */
+@media (min-width: 728px) {
+    .col-2-perfil {
+        width: 25%;
+    }
+
+    .col-2-repositorios {
+        width: 75%;
+    }
+}
+
+/* Três Colunas */
+@media (min-width: 728px) {
+    .col-3 {
+        width: 33.33333%;
+    }
+}
+
+/* Quatro Colunas */
+@media (min-width: 728px) {
+    .col-4 {
+        width: 25%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 727px) {
+    .col-4 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 50px) and (max-width: 499px) {
+    .col-4 {
+        width: 100%;
+    }
+}
+
+/* Cinco Colunas */
+@media (min-width: 728px) {
+    .col-5 {
+        width: 20%;
+    }
+}
+
+/* Seis Colunas */
+@media (min-width: 728px) {
+    .col-6 {
+        width: 16.6666667%;
+    }
+}
+
+/* Media dos Containers */
+@media (min-width: 1170px) {
+    .containerApp {
+        max-width: 1170px;
+        padding: 0;
+    }
+}
+
+/* Container */
+.containerApp {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centralizar Objetos */
+.flexCentralizado {
+	justify-content: center;
+}
+
+.containerFlexCentralizado {
+	margin: 0 auto;
+	display: flex;
+}
+
+/* Posicionar os objetos a esquerda (INICIO) */
+.flexEsquerda {
+	justify-content: flex-start;
+}
+
+.containerFlexEsquerda {
+	margin: 0 auto;
+	display: flex;	
+}
+
+/* Posicionar os objetos a direita (FIM) */
+.flexDireita {
+	justify-content: flex-end;
+}
+
+.containerFlexDireita {
+	margin: 0 auto;
+	display: flex;	
+}
+/* FIM DA NORMALIZAÇÃO */
+
+
+
+
+
+#cabecalho {
+    background: #161b22;
+
+    .logo {
+        width: 80px;
+        padding: 10px 0;
+    }
+}
+
+#home {
+    padding: 30px 0;
+
+    .allItemHome {
+        padding: 0 10px;
+
+        .fotoPerfil {
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid #161b22;
+        }
+    
+        .itemConteudoInput {
+            padding-bottom: 25px;
+    
+            .inputPesquisa {
+                background: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 4px;
+                padding: 8px 0;
+                width: 97%;
+                text-indent: 10px;
+                color: #f0f6fc;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+            }
+
+            .inputPesquisa::placeholder {
+                color: #f0f6fc;
+            }
+        }
+    
+        .tituloRespositorios {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            color: #c9d1d9;
+        }
+
+        .allConteudoRepositorios {
+
+
+            .itemConteudoRepositorio {
+                padding: 15px 15px;
+                border-radius: 5px;
+                margin: 10px 20px 10px 0;
+                border: 1px solid #30363d;
+
+                .AnchorRepositorio {
+                    text-decoration: none;
+                }
+    
+                .AnchorRepositorio:hover {
+                    text-decoration: underline;
+                    color: #58a6ff;
+                }
+
+                .tituloItemRepositorio {
+                    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #58a6ff;
+                }
+
+                .statusItemRepositorio {
+                    color: #a7aeb4;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 12px;
+                    text-align: center;
+                    border-radius: 30px;
+                    border: 1px solid #30363d;
+                    padding: 2px 0;
+                }
+
+                .descricaoItemRepositorio {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 12px;
+                    color: #a9a9a9;
+                    margin-top: 8px;
+                    margin-bottom: 16px;
+                }
+
+                .linguageItemRepositorio {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 13px;
+                    color: #4e6383;
+                }
+            }
+        }
+    }
+}
