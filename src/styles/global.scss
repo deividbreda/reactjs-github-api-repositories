@@ -1,4 +1,4 @@
-/* Normalização */
+/* INICIO NORMALIZAÇÃO */
 html{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -49,7 +49,6 @@ input {
 [hidden] {
     display: none;
 }
-/* Fim da Normalização */
 
 /* Coluna */
 .col {
@@ -70,7 +69,7 @@ input {
 }
 
 /* Duas Colunas */
-@media (min-width: 728px) {
+@media (min-width: 30px) {
     .col-2-itemTituloRepositorio {
         width: 85%;
     }

@@ -1,0 +1,18 @@
+/* Responsivo */
+@media(max-width: 727px){
+    #home {
+        .allItemHome {
+            .itemConteudoInput {
+                padding-top: 30px;
+            }
+        }
+        
+        .itemConteudoMargin {
+            .itemConteudoRepositorio {
+                .statusItemRepositorio {
+                    font-size: 10px;
+                }
+            }
+        } 
+    }   
+}
