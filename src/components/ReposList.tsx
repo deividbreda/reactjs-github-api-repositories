@@ -13,6 +13,10 @@ export interface Repositorio {
 
 export function ReposList(){
     const [repositorios, setRepositorios]= useState<Repositorio[]>([]);
+    const [pesquisa, setPesquisa]= useState('');
+
+    const lowerPesquisa = pesquisa.toLowerCase();
+    const filtroRepositorios = repositorios.filter((repositorio) => repositorio.name.toLowerCase().includes(lowerPesquisa))
 
     useEffect(() => {
         fetch('https://api.github.com/users/deividbreda/repos')
@@ -51,14 +55,15 @@ export function ReposList(){
                         <div className="allItemHome">
                             <div className="itemConteudoMargin">
                                 <div className="itemConteudoInput">                               
-                                    <input className="inputPesquisa" placeholder="Pesquisar repositório..." type="text" name="" id="" />                            
+                                    <input className="inputPesquisa" placeholder="Pesquisar repositório..."
+                                    type="text" value={pesquisa} onChange={(e)=> setPesquisa(e.target.value)}/>                            
                                 </div>
 
                                 <h1 className="tituloRespositorios">Lista de Repositórios</h1>
                             </div>
                             
                             <div className="col">
-                                {repositorios.map(repositorio => {
+                                {filtroRepositorios.map(repositorio => {
                                     return <ReposItem key={repositorio.name} repositorio={repositorio} />
                                 })}
                             </div>                          
