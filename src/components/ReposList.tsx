@@ -36,27 +36,35 @@ export function ReposList(){
                     <div className="col col-2-perfil">
                         <div className="allItemHome">
                             <img className="fotoPerfil" src={perfil} alt="" />
+                            <div className="itemConteudoTituloPerfil">
+                                <h1 className="tituloPerfil"> Deivid Breda </h1>
+                                <p className="subtituloPerfil"> deividbreda </p>
+                            </div>
+                            <p className="descricaoPerfil"> Aplicação desenvolvida em ReactJs utilizando Github API </p>
+                            <a 
+                            href="https://github.com/deividbreda/reactjs-github-api-repositories" 
+                            target="_blank" className="followPerfil"> Show this Repository </a>
                         </div>
                     </div>
 
                     <div className="col col-2-repositorios">
                         <div className="allItemHome">
-                            <div className="itemConteudoInput">
-                                <input className="inputPesquisa" placeholder="Pesquisar repositório..." type="text" name="" id="" />
-                            </div>
-
-                            <h1 className="tituloRespositorios">Lista de Repositórios</h1>
-                            <div className="allConteudoRepositorios">
-                                <div className="col">
-                            {repositorios.map(repositorio => {
-                                return <ReposItem key={repositorio.name} repositorio={repositorio} />
-                            })}
+                            <div className="itemConteudoMargin">
+                                <div className="itemConteudoInput">                               
+                                    <input className="inputPesquisa" placeholder="Pesquisar repositório..." type="text" name="" id="" />                            
                                 </div>
+
+                                <h1 className="tituloRespositorios">Lista de Repositórios</h1>
                             </div>
+                            
+                            <div className="col">
+                                {repositorios.map(repositorio => {
+                                    return <ReposItem key={repositorio.name} repositorio={repositorio} />
+                                })}
+                            </div>                          
                         </div>
                     </div>
-                </div>
-                
+                </div>              
             </div>
         </div>
         </>

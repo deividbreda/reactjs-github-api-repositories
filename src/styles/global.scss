@@ -191,7 +191,7 @@ input {
 }
 
 #home {
-    padding: 30px 0;
+    padding: 25px 0;
 
     .allItemHome {
         padding: 0 10px;
@@ -200,6 +200,54 @@ input {
             width: 100%;
             border-radius: 50%;
             border: 2px solid #161b22;
+        }
+
+        .itemConteudoTituloPerfil {
+            padding: 16px 0;
+
+            .tituloPerfil {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 23px;
+                color: #c9d1d9;
+            }
+
+            .subtituloPerfil {
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                font-size: 16px;
+                color: #8b949e;
+            }
+        }
+
+        .descricaoPerfil {
+            color: #c9d1d9;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            margin-bottom: 16px;  
+        }
+
+        .followPerfil {
+            border: 1px solid #6e768161;
+            border-radius: 5px;
+            color: #c9d1d9;
+            background: #21262d;
+            width: 100%;
+            padding: 5px 0;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all .3s;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .followPerfil:hover {
+            border: 1px solid #7c838e82;
+            background: #3a414b;
+            transition: all .3s;
         }
     
         .itemConteudoInput {
@@ -210,7 +258,7 @@ input {
                 border: 1px solid #30363d;
                 border-radius: 4px;
                 padding: 8px 0;
-                width: 97%;
+                width: 100%;
                 text-indent: 10px;
                 color: #f0f6fc;
                 font-family: 'Poppins', sans-serif;
@@ -229,31 +277,30 @@ input {
             color: #c9d1d9;
         }
 
-        .allConteudoRepositorios {
-
+        .itemConteudoMargin {
+            margin: 10px;
 
             .itemConteudoRepositorio {
                 padding: 15px 15px;
                 border-radius: 5px;
-                margin: 10px 20px 10px 0;
                 border: 1px solid #30363d;
-
+    
                 .AnchorRepositorio {
                     text-decoration: none;
                 }
-    
+        
                 .AnchorRepositorio:hover {
                     text-decoration: underline;
                     color: #58a6ff;
                 }
-
+    
                 .tituloItemRepositorio {
                     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
                     font-weight: 600;
                     font-size: 14px;
                     color: #58a6ff;
                 }
-
+    
                 .statusItemRepositorio {
                     color: #a7aeb4;
                     font-family: 'Poppins', sans-serif;
@@ -263,7 +310,7 @@ input {
                     border: 1px solid #30363d;
                     padding: 2px 0;
                 }
-
+    
                 .descricaoItemRepositorio {
                     font-family: 'Poppins', sans-serif;
                     font-size: 12px;
@@ -271,7 +318,7 @@ input {
                     margin-top: 8px;
                     margin-bottom: 16px;
                 }
-
+    
                 .linguageItemRepositorio {
                     font-family: 'Poppins', sans-serif;
                     font-size: 13px;
